@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="File">
+<xs:complexType>
+    <xs:sequence maxOccurs="unbounded">
+        <xs:element name="Agency" maxOccurs="unbounded">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="Name" type="xs:string"></xs:element>
+                <xs:element name="E-Mail" type="xs:string"></xs:element>
+                <xs:element name="Phone">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:pattern value="[0-9]{12}"></xs:pattern>
+                    </xs:restriction>
+                </xs:simpleType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+        </xs:element>
+
+        <xs:element name="Owners" minOccurs="1" maxOccurs="unbounded">
+        <xs:complexType>
+
+            <xs:all>
+                <xs:element name="Name" type="xs:string"></xs:element>
+            </xs:all>
+
+            <xs:attribute name="ID" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                    <xs:pattern value="[0-9]{8}"></xs:pattern>
+                </xs:restriction>
+            </xs:simpleType>
+            </xs:attribute>
+
+        </xs:complexType>
+        </xs:element>
+
+        <xs:element name="Flats">
+        <xs:complexType>
+
+            <xs:sequence>
+                <xs:element name="Description" type="xs:string"></xs:element>
+                <xs:element name="Value" type="xs:string"></xs:element>
+            </xs:sequence>
+
+            <xs:attribute name="ID" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[A-Z0-9]{7}"></xs:pattern>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            
+            <xs:attribute name="Comfort" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="A|B|C|D|E|F"></xs:pattern>
+                </xs:restriction>
+            </xs:simpleType>
+            </xs:attribute>
+
+            <xs:attribute name="Squared-Meters" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                    <xs:minInclusive value="40"></xs:minInclusive>
+                    <xs:maxInclusive value="400"></xs:maxInclusive>
+                </xs:restriction>
+            </xs:simpleType>
+            </xs:attribute>
+
+        </xs:complexType>
+        </xs:element>
+    </xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:schema>

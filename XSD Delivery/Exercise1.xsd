@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="Solicitud"/>
+
+    <xs:element name="Datos"/>
+        
+        <xs:element name="Nombre" type="xs:string"></xs:element>
+        
+        <xs:element name="Apellidos" type="xs:string"></xs:element>
+        
+        <xs:element name="DNI">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="[0-9]{8}[A-Z]"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+
+        <xs:element name="NIA">
+            <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                    <xs:pattern value="[0-9]{8}"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+
+        <xs:element name="Domicilio">
+            <xs:complexType>
+                <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                        <xs:attribute name="numero" type="xs:integer"/>    
+                        <xs:attribute name="via" type="xs:string" />
+                    </xs:extension>
+                </xs:simpleContent>
+            </xs:complexType>
+        </xs:element>
+        
+        <xs:element name="CP">
+            <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                    <xs:pattern value="[0-9]{5}"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+        
+        <xs:element name="Localidad" type="xs:string"></xs:element>
+        
+        <xs:element name="Provincia" type="xs:string"></xs:element>
+        
+        <xs:element name="Nacionalidad">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="Española|Extranjero"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+        
+        <xs:element name="Telefono">
+            <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                    <xs:pattern value="[6][0-9]{8}"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+        
+        <xs:element name="Correo-Electrónico" type="xs:string"></xs:element>
+
+
+
+    <xs:element name="Notificaciones"/>
+        <xs:element name="Domicilio-Notificaciones">
+            <xs:complexType>
+                <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                        <xs:attribute name="numero" type="xs:integer"/>    
+                        <xs:attribute name="via" type="xs:string" />
+                    </xs:extension>
+                </xs:simpleContent>
+            </xs:complexType>
+        </xs:element>
+        
+        <xs:element name="CP-Notificaciones">
+            <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                    <xs:pattern value="[0-9]{5}"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+        
+        <xs:element name="Localidad-Notificaciones" type="xs:string"></xs:element>
+        
+        <xs:element name="Provincia-Notificaciones" type="xs:string"></xs:element>
+        
+        <xs:element name="Telefono-Notificaciones">
+            <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                    <xs:pattern value="[6][0-9]{8}"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:element>
+        
+        <xs:element name="Email-Notificaciones" type="xs:string"></xs:element>
+
+    <xs:element name="Matricula">
+    <xs:complexType>
+        <xs:attribute name="codigo" type="xs:integer"/>
+        <xs:attribute name="centro" type="xs:string"/>
+        <xs:attribute name="localidad" type="xs:string"/>
+        <xs:attribute name="grado">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Basico"/>
+                    <xs:enumeration value="Medio"/>
+                    <xs:enumeration value="Superior"/>
+                    <xs:enumeration value="Especialización"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="ciclo" type="xs:string"/>
+        <xs:attribute name="curso">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="1º|2º"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="fondos">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="Publico|Concertado"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="empresaFCT" type="xs:string"/>
+        <xs:attribute name="dirección" type="xs:string"/>
+        <xs:attribute name="distancia" type="xs:string"/>
+        <xs:attribute name="horas" type="xs:string"/>
+    </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Tutor-Legal">
+    <xs:complexType>
+
+        <xs:sequence>
+            <xs:element name="Apellidos" type="xs:string"></xs:element>
+            
+            <xs:element name="Nombre" type="xs:string"></xs:element>
+            
+            <xs:element name="DNI-NIF">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[0-9]{8}[A-Z]"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            
+            <xs:element name="Domicilio">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="numero" type="xs:integer"/>    
+                            <xs:attribute name="via" type="xs:string" />
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            
+            <xs:element name="CP">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:pattern value="[0-9]{5}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            
+            <xs:element name="Localidad" type="xs:string"></xs:element>
+            
+            <xs:element name="Provincia" type="xs:string"></xs:element>
+            
+            <xs:element name="Nacionalidad">
+
+            </xs:element>
+            <xs:element name="Telefono">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:pattern value="[6][0-9]{8}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+            <xs:element name="Correo-Electronico" type="xs:string"></xs:element>
+        </xs:sequence>
+        
+        <xs:attribute name="calidad">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="Padre|Madre|Tutor"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+
+    </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Documentación">
+    <xs:complexType>
+        <xs:attribute name="certificado-acreditativo">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="Yes|No"/>
+            </xs:restriction>
+        </xs:simpleType>
+        </xs:attribute>
+
+        <xs:attribute name="acreditacion-criterios">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="Yes|No"/>
+                </xs:restriction>
+            </xs:simpleType>
+            </xs:attribute>
+
+        <xs:attribute name="otros" type="xs:string">
+
+        </xs:attribute>
+    </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Declaración-Ayudas">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="Organismo" maxOccurs="3"></xs:element>
+            <xs:element name="Convocatoria" maxOccurs="3"></xs:element>
+            <xs:element name="Importe-Solicitado" maxOccurs="3"></xs:element>
+            <xs:element name="Importe-Concedido" maxOccurs="3"></xs:element>
+        </xs:sequence>
+
+        <xs:attribute name="no-solicita-ayuda">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="Yes|No"/>
+                </xs:restriction>
+            </xs:simpleType>
+            </xs:attribute>
+
+        <xs:attribute name="si-solicita-ayuda">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="Yes|No"/>
+                </xs:restriction>
+            </xs:simpleType>
+            </xs:attribute>
+    </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Obtención-Datos-Consulta-Telemática">
+    <xs:complexType>
+        <xs:attribute name="autorizacion">
+            <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="Concede|No concede"></xs:pattern>
+            </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Aceptar-Solicitud">
+        <xs:complexType>
+            <xs:attribute name="persona" type="xs:string"></xs:attribute>
+            <xs:attribute name="dia" type="xs:integer"></xs:attribute>
+            <xs:attribute name="mes" type="xs:string"></xs:attribute>
+            <xs:attribute name="año" type="xs:integer"></xs:attribute>
+            <xs:attribute name="firma" type="xs:string"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

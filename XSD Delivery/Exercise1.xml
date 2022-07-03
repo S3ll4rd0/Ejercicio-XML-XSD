@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Solicitud xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="exercise1.xsd">
+
+    <Datos>
+        <Nombre>Antonio Nicolás</Nombre>
+        <Apellidos>Salmerón Rubio</Apellidos>
+        <DNI>48679042W</DNI>
+        <NIA>10938319</NIA>
+        <Domicilio via="Calle" numero="9">C/Pati Fosc</Domicilio>
+        <CP>03570</CP>
+        <Localidad>Villajoyosa</Localidad>
+        <Provincia>Alicante</Provincia>
+        <Nacionalidad>Española</Nacionalidad>
+        <Telefono>638533882</Telefono>
+        <Correo-Electrónico>tonet.sellardo@gmail.com</Correo-Electrónico>
+    </Datos>
+
+    <Notificaciones>
+        <Domicilio-Notificaciones via="Calle" numero="9">
+            C/Pati Fosc
+        </Domicilio-Notificaciones>
+        <CP-Notificaciones>03579</CP-Notificaciones>
+        <Localidad-Notificaciones>Villajoyosa</Localidad-Notificaciones>
+        <Provincia-Notificaciones>Alicante</Provincia-Notificaciones>
+        <Telefono-Notificaciones>638533882</Telefono-Notificaciones>
+        <Email-Notificaciones>tonet.sellardo@gmail.com</Email-Notificaciones>
+    </Notificaciones>
+
+    <matricula 
+    codigo="03010132" 
+    centro="IES Pere Maria Orts" 
+    localidad="Benidorm"
+    grado="Superior"
+    ciclo="Desarrollo de Aplicaciones Web"
+    curso="2º"
+    fondos="Publico"
+    empresaFCT="Inventada S.A."
+    dirección="C/ de la piruleta"
+    distancia="Mil millones de años luz"
+    horas="Tantas que desearás morir"
+    />
+
+    <Tutor-Legal calidad="Padre">
+        <Apellidos>Rubio Ivorra</Apellidos>
+        <Nombre>Aurora</Nombre>
+        <DNI-NIF>52780525X</DNI-NIF>
+        <Domicilio numero="9" via="calle">C/ Pati Fosc</Domicilio>
+        <CP>03579</CP>
+        <Localidad>Villajoyosa</Localidad>
+        <Provincia>Alicante</Provincia>
+        <Nacionalidad>Española</Nacionalidad>
+        <Telefono>699144191</Telefono>
+        <Correo-Electronico>sellaurora@hotmail.com</Correo-Electronico>
+    </Tutor-Legal>
+
+    <Documentación 
+    certificado-acreditativo="Yes"
+    acreditacion-criterios="Yes"
+    otros="Nada que añadir"
+    />
+
+    <Declaración-Ayudas no-solicita-ayuda="No" si-solicita-ayuda="No">
+        <Organismo/>
+        <Organismo/>
+        <Organismo/>
+        <Convocatoria/>
+        <Convocatoria/>
+        <Convocatoria/>
+        <Importe-Solicitado/>
+        <Importe-Solicitado/>
+        <Importe-Solicitado/>
+        <Importe-Concedido/>
+        <Importe-Concedido/>
+        <Importe-Concedido/>
+    </Declaración-Ayudas>
+
+    <Obtención-Datos-Consulta-Telemática autorizacion="Concede"/>
+
+    <Aceptar-Solicitud 
+    persona="Antonio Nicolás Salmerón Rubio"
+    dia="25"
+    mes="Mayo"
+    año="2022"
+    firma="Antonio S"
+    />
+
+</Solicitud>

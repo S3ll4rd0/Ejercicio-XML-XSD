@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<solicitud xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="exercise1.xsd">
+    <datos>
+        <nombre></nombre>
+        <apellidos></apellidos>
+        <DNI></DNI>
+    </datos>
+
+    <notificaciones>
+        <domicilio></domicilio>
+        <CP>12345</CP>
+    </notificaciones>
+
+    <matricula codigo="03010132"/>
+</solicitud>

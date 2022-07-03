@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<File xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="exercise2.xsd">
+
+<Agency>
+    <Name>Miami</Name>
+    <E-Mail>miami539@buyrent.com</E-Mail>
+    <Phone>010513215539</Phone>
+</Agency>
+
+<Owners ID="58448143">
+    <Name>Mike Holloway</Name>
+</Owners>
+
+<Flats ID="PR10001" Comfort="B" Squared-Meters="150">
+    <Description>
+        Beautiful place located near the main beach. 
+        Just 5 minutes walk to the center of town, very cozy, 
+        very well maintained, in a very quiet urbanization, 
+        a very charming apartment with great views.
+    </Description>
+    <Value>800.000$</Value>
+</Flats>
+
+<Agency>
+    <Name>Miami</Name>
+    <E-Mail>miami539@buyrent.com</E-Mail>
+    <Phone>010513215539</Phone>
+</Agency>
+
+<Owners ID="58448143">
+    <Name>Mike Holloway</Name>
+</Owners>
+
+<Flats ID="PR10002" Comfort="A" Squared-Meters="120">
+    <Description>
+        Wonderful apartment located in the heart of the city, 
+        is just 10 minutes walk from the bay. 
+        Beautiful views of the beach.
+    </Description>
+    <Value>700.000$</Value>
+</Flats>
+
+</File>
